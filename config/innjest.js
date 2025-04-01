@@ -85,7 +85,7 @@ export const createUserOrder = inngest.createFunction(
 
     // suppose we get more 25 orders within timeout 5s, then all orders will be processed simutaneously
     batchEvents: {
-      maxSize: 25,
+      maxSize: 5,
       timeout: "5s",
     },
   },
