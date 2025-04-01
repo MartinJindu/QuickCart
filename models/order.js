@@ -10,8 +10,7 @@ const orderSchema = new mongoose.Schema({
   ],
   amount: { type: Number, required: true },
   address: { type: String, required: true, ref: "address" },
-  status: { type: Number, required: true },
-  image: { type: Array, required: true, default: "Order Placed" },
+  status: { type: Number, required: true, default: "Order Placed" },
   date: { type: Number, required: true },
 });
 
