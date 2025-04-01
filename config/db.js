@@ -12,12 +12,12 @@ async function connectDB() {
   }
 
   if (!cached.promise) {
-    const options = {
-      bufferCommand: false,
-    };
+    // const options = {
+    //   bufferCommand: false,
+    // };
 
     cached.promise = mongoose
-      .connect(`${process.env.NEXT_PUBLIC_MONGODB_URI}/quickcart`, options)
+      .connect(`${process.env.NEXT_PUBLIC_MONGODB_URI}/quickcart`)
       .then((mongoose) => {
         return mongoose;
       });
