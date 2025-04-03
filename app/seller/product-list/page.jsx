@@ -65,7 +65,24 @@ const ProductList = () => {
               <tbody className="text-sm text-gray-500">
                 {products.map((product, index) => (
                   <tr key={index} className="border-t border-gray-500/20">
-                    <td className="md:px-4 pl-2 md:pl-4 py-3 flex items-center space-x-3 truncate">
+                    {/* Mobile */}
+                    <td className="md:hidden pl-2 py-3 flex items-center space-x-3 truncate">
+                      <div
+                        className="bg-gray-500/10 rounded p-2"
+                        onClick={() => router.push(`/product/${product._id}`)}
+                      >
+                        <Image
+                          src={product.image[0]}
+                          alt="product Image"
+                          className="w-16"
+                          width={1280}
+                          height={720}
+                        />
+                      </div>
+                      <span className="truncate w-full">{product.name}</span>
+                    </td>
+                    {/* md and above */}
+                    <td className="hidden md:px-4 pl-2 md:pl-4 py-3 md:flex items-center space-x-3 truncate">
                       <div className="bg-gray-500/10 rounded p-2">
                         <Image
                           src={product.image[0]}
@@ -77,6 +94,7 @@ const ProductList = () => {
                       </div>
                       <span className="truncate w-full">{product.name}</span>
                     </td>
+
                     <td className="px-4 py-3 max-sm:hidden">
                       {product.category}
                     </td>
