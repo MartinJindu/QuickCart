@@ -9,6 +9,7 @@ import { NextResponse } from "next/server";
 export async function GET(req) {
   try {
     const { userId } = getAuth(req);
+    console.log(process.env.CLOUDINARY_CLOUD_NAME);
 
     await connectDB();
 

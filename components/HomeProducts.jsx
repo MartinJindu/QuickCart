@@ -8,7 +8,7 @@ const HomeProducts = () => {
   return (
     <div className="flex flex-col items-center pt-14">
       <p className="text-2xl font-medium text-left w-full">Popular products</p>
-      <div className="grid max-[344px]:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 flex-col px-auto items-center gap-6 mt-6 pb-14 w-full">
+      <div className="grid max-[371px]:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 flex-col px-auto items-center gap-6 mt-6 pb-14 w-full">
         {products.map((product, index) => (
           <ProductCard key={index} product={product} />
         ))}

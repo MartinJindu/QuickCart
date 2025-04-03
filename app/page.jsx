@@ -9,6 +9,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Home = () => {
+  console.log(process.env);
+
   return (
     <>
       <Navbar />
